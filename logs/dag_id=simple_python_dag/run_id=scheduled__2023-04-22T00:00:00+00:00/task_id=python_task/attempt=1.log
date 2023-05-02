@@ -1,0 +1,24 @@
+[2023-04-25T08:38:08.392+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_python_dag.python_task scheduled__2023-04-22T00:00:00+00:00 [queued]>
+[2023-04-25T08:38:08.440+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_python_dag.python_task scheduled__2023-04-22T00:00:00+00:00 [queued]>
+[2023-04-25T08:38:08.442+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-25T08:38:08.445+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-25T08:38:08.446+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-25T08:38:08.530+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): python_task> on 2023-04-22 00:00:00+00:00
+[2023-04-25T08:38:08.547+0000] {standard_task_runner.py:55} INFO - Started process 686 to run task
+[2023-04-25T08:38:08.569+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'simple_python_dag', 'python_task', 'scheduled__2023-04-22T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmpzstpsuww']
+[2023-04-25T08:38:08.575+0000] {standard_task_runner.py:83} INFO - Job 5: Subtask python_task
+[2023-04-25T08:38:08.984+0000] {task_command.py:389} INFO - Running <TaskInstance: simple_python_dag.python_task scheduled__2023-04-22T00:00:00+00:00 [running]> on host d5e7c089f50a
+[2023-04-25T08:38:09.725+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=simple_python_dag
+AIRFLOW_CTX_TASK_ID=python_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-22T00:00:00+00:00
+[2023-04-25T08:38:09.727+0000] {weather_dag.py:6} INFO - Hello, World!
+[2023-04-25T08:38:09.729+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-25T08:38:09.758+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=simple_python_dag, task_id=python_task, execution_date=20230422T000000, start_date=20230425T083808, end_date=20230425T083809
+[2023-04-25T08:38:09.859+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-25T08:38:09.970+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

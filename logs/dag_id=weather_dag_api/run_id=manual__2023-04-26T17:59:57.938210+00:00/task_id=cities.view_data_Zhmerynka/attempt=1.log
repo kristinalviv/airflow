@@ -1,0 +1,24 @@
+[2023-04-26T18:00:22.400+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.cities.view_data_Zhmerynka manual__2023-04-26T17:59:57.938210+00:00 [queued]>
+[2023-04-26T18:00:22.528+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.cities.view_data_Zhmerynka manual__2023-04-26T17:59:57.938210+00:00 [queued]>
+[2023-04-26T18:00:22.530+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T18:00:22.537+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-26T18:00:22.548+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T18:00:22.684+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): cities.view_data_Zhmerynka> on 2023-04-26 17:59:57.938210+00:00
+[2023-04-26T18:00:22.718+0000] {standard_task_runner.py:55} INFO - Started process 740 to run task
+[2023-04-26T18:00:22.760+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'cities.view_data_Zhmerynka', 'manual__2023-04-26T17:59:57.938210+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmp09paqhva']
+[2023-04-26T18:00:22.773+0000] {standard_task_runner.py:83} INFO - Job 121: Subtask cities.view_data_Zhmerynka
+[2023-04-26T18:00:23.292+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.cities.view_data_Zhmerynka manual__2023-04-26T17:59:57.938210+00:00 [running]> on host b46a99c748bd
+[2023-04-26T18:00:24.550+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=cities.view_data_Zhmerynka
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T17:59:57.938210+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-26T17:59:57.938210+00:00
+[2023-04-26T18:00:24.644+0000] {logging_mixin.py:137} INFO - data is  ['2023-04-25T10:20:00Z', 15.5, 0.0, 5.7, 'Zhmerynka']
+[2023-04-26T18:00:24.650+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-26T18:00:24.703+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=cities.view_data_Zhmerynka, execution_date=20230426T175957, start_date=20230426T180022, end_date=20230426T180024
+[2023-04-26T18:00:24.843+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-26T18:00:25.032+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

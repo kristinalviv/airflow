@@ -1,0 +1,2 @@
+[2023-04-26T17:13:33.489+0000] {taskinstance.py:1084} INFO - Dependencies not met for <TaskInstance: weather_dag_api.cities.insert_data_Odesa manual__2023-04-26T17:12:49.794539+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=1, done=1), upstream_task_ids={'cities.python_task_Odesa'}
+[2023-04-26T17:13:33.520+0000] {local_task_job.py:151} INFO - Task is not able to be run

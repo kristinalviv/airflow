@@ -1,0 +1,24 @@
+[2023-04-26T16:46:22.191+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.python_task1 manual__2023-04-26T16:46:17.435621+00:00 [queued]>
+[2023-04-26T16:46:22.241+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.python_task1 manual__2023-04-26T16:46:17.435621+00:00 [queued]>
+[2023-04-26T16:46:22.245+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T16:46:22.254+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-26T16:46:22.257+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T16:46:22.393+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): python_task1> on 2023-04-26 16:46:17.435621+00:00
+[2023-04-26T16:46:22.430+0000] {standard_task_runner.py:55} INFO - Started process 4679 to run task
+[2023-04-26T16:46:22.462+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'python_task1', 'manual__2023-04-26T16:46:17.435621+00:00', '--job-id', '400', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_final.py', '--cfg-path', '/tmp/tmpmnmkyqpn']
+[2023-04-26T16:46:22.480+0000] {standard_task_runner.py:83} INFO - Job 400: Subtask python_task1
+[2023-04-26T16:46:22.998+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.python_task1 manual__2023-04-26T16:46:17.435621+00:00 [running]> on host d48b88797b3b
+[2023-04-26T16:46:23.516+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=python_task1
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T16:46:17.435621+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-26T16:46:17.435621+00:00
+[2023-04-26T16:46:23.526+0000] {weather_dag_final.py:24} INFO - Starting db creation
+[2023-04-26T16:46:23.530+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-26T16:46:23.619+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=python_task1, execution_date=20230426T164617, start_date=20230426T164622, end_date=20230426T164623
+[2023-04-26T16:46:23.712+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-26T16:46:23.917+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

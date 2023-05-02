@@ -1,0 +1,36 @@
+[2023-04-26T17:57:26.806+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.create_table_postgres manual__2023-04-26T17:57:20.789493+00:00 [queued]>
+[2023-04-26T17:57:26.827+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.create_table_postgres manual__2023-04-26T17:57:20.789493+00:00 [queued]>
+[2023-04-26T17:57:26.829+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T17:57:26.830+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-26T17:57:26.832+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T17:57:26.865+0000] {taskinstance.py:1309} INFO - Executing <Task(PostgresOperator): create_table_postgres> on 2023-04-26 17:57:20.789493+00:00
+[2023-04-26T17:57:26.884+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'create_table_postgres', 'manual__2023-04-26T17:57:20.789493+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmp3rrm7pff']
+[2023-04-26T17:57:26.887+0000] {standard_task_runner.py:83} INFO - Job 86: Subtask create_table_postgres
+[2023-04-26T17:57:26.878+0000] {standard_task_runner.py:55} INFO - Started process 615 to run task
+[2023-04-26T17:57:27.020+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.create_table_postgres manual__2023-04-26T17:57:20.789493+00:00 [running]> on host b46a99c748bd
+[2023-04-26T17:57:27.170+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=create_table_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T17:57:20.789493+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-26T17:57:20.789493+00:00
+[2023-04-26T17:57:27.173+0000] {sql.py:254} INFO - Executing:  CREATE TABLE IF NOT EXISTS measurements (
+			timestamp TIMESTAMP,
+			temp FLOAT,
+			precipitation FLOAT,
+			wind_speed FLOAT,
+			location VARCHAR);
+[2023-04-26T17:57:27.194+0000] {base.py:73} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-26T17:57:27.920+0000] {base.py:73} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-26T17:57:27.928+0000] {sql.py:375} INFO - Running statement:  CREATE TABLE IF NOT EXISTS measurements (
+			timestamp TIMESTAMP,
+			temp FLOAT,
+			precipitation FLOAT,
+			wind_speed FLOAT,
+			location VARCHAR);, parameters: None
+[2023-04-26T17:57:27.955+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=create_table_postgres, execution_date=20230426T175720, start_date=20230426T175726, end_date=20230426T175727
+[2023-04-26T17:57:28.010+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-26T17:57:28.134+0000] {taskinstance.py:2596} INFO - 5 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+[2023-04-27T07:07:23.299+0000] {processor.py:153} INFO - Started process (PID=554) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:23.342+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:07:23.354+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:23.354+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:24.575+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:26.815+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:26.815+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:07:27.221+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:27.220+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:07:27.648+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 4.375 seconds
+[2023-04-27T07:07:58.531+0000] {processor.py:153} INFO - Started process (PID=567) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:58.534+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:07:58.536+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:58.536+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:58.634+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:07:58.869+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:58.869+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:07:58.944+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:07:58.944+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:07:58.987+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 0.464 seconds
+[2023-04-27T07:08:29.320+0000] {processor.py:153} INFO - Started process (PID=578) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:08:29.331+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:08:29.337+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:08:29.335+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:08:29.678+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:08:30.040+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:08:30.040+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:08:30.267+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:08:30.267+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:08:30.477+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 1.198 seconds
+[2023-04-27T07:09:00.720+0000] {processor.py:153} INFO - Started process (PID=588) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:00.722+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:09:00.724+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:00.724+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:00.807+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:00.944+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:00.943+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:09:00.996+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:00.995+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:09:01.036+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 0.323 seconds
+[2023-04-27T07:09:31.689+0000] {processor.py:153} INFO - Started process (PID=600) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:31.693+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:09:31.695+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:31.695+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:31.782+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:09:31.842+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:31.842+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:09:31.893+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:09:31.893+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:09:31.930+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 0.251 seconds
+[2023-04-27T07:10:02.674+0000] {processor.py:153} INFO - Started process (PID=613) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:02.678+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:10:02.685+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:02.683+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:02.857+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:02.896+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:02.896+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:10:02.994+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:02.994+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:10:03.096+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 0.435 seconds
+[2023-04-27T07:10:33.638+0000] {processor.py:153} INFO - Started process (PID=626) to work on /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:33.643+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/untitled folder/weather_dag_api copy.py for tasks to queue
+[2023-04-27T07:10:33.649+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:33.648+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:33.796+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weather_dag_api']) retrieved from /opt/airflow/dags/untitled folder/weather_dag_api copy.py
+[2023-04-27T07:10:33.854+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:33.853+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-27T07:10:34.055+0000] {logging_mixin.py:137} INFO - [2023-04-27T07:10:34.054+0000] {dag.py:3456} INFO - Setting next_dagrun for weather_dag_api to 2023-04-27T00:00:00+00:00, run_after=2023-04-28T00:00:00+00:00
+[2023-04-27T07:10:34.098+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/untitled folder/weather_dag_api copy.py took 0.474 seconds

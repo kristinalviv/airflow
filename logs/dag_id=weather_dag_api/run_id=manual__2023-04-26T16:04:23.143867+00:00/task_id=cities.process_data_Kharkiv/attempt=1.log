@@ -1,0 +1,24 @@
+[2023-04-26T16:04:49.890+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.cities.process_data_Kharkiv manual__2023-04-26T16:04:23.143867+00:00 [queued]>
+[2023-04-26T16:04:50.058+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.cities.process_data_Kharkiv manual__2023-04-26T16:04:23.143867+00:00 [queued]>
+[2023-04-26T16:04:50.068+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T16:04:50.073+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-26T16:04:50.074+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-26T16:04:50.230+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): cities.process_data_Kharkiv> on 2023-04-26 16:04:23.143867+00:00
+[2023-04-26T16:04:50.269+0000] {standard_task_runner.py:55} INFO - Started process 3708 to run task
+[2023-04-26T16:04:50.317+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'cities.process_data_Kharkiv', 'manual__2023-04-26T16:04:23.143867+00:00', '--job-id', '291', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmp6ug_lmte']
+[2023-04-26T16:04:50.323+0000] {standard_task_runner.py:83} INFO - Job 291: Subtask cities.process_data_Kharkiv
+[2023-04-26T16:04:50.932+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.cities.process_data_Kharkiv manual__2023-04-26T16:04:23.143867+00:00 [running]> on host d48b88797b3b
+[2023-04-26T16:04:52.208+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=cities.process_data_Kharkiv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T16:04:23.143867+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-26T16:04:23.143867+00:00
+[2023-04-26T16:04:52.270+0000] {logging_mixin.py:137} INFO - 13.4
+[2023-04-26T16:04:52.272+0000] {python.py:177} INFO - Done. Returned value was: ('2023-04-25T10:20:00Z', 13.4, 0.42, 2.7, 'Kharkiv')
+[2023-04-26T16:04:52.403+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=cities.process_data_Kharkiv, execution_date=20230426T160423, start_date=20230426T160449, end_date=20230426T160452
+[2023-04-26T16:04:52.625+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-26T16:04:52.929+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

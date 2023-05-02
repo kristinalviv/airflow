@@ -1,0 +1,73 @@
+[2023-04-27T06:48:24.366+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T06:48:24.468+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T06:48:24.471+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T06:48:24.472+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-27T06:48:24.479+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T06:48:24.950+0000] {taskinstance.py:1309} INFO - Executing <Task(SimpleHttpOperator): cities.extract_data_Kharkiv> on 2023-04-26 00:00:00+00:00
+[2023-04-27T06:48:25.015+0000] {standard_task_runner.py:55} INFO - Started process 204 to run task
+[2023-04-27T06:48:25.044+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'cities.extract_data_Kharkiv', 'scheduled__2023-04-26T00:00:00+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmpp53pc2sf']
+[2023-04-27T06:48:25.051+0000] {standard_task_runner.py:83} INFO - Job 20: Subtask cities.extract_data_Kharkiv
+[2023-04-27T06:48:25.915+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [running]> on host 80d943d8f5b4
+[2023-04-27T06:48:26.882+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=cities.extract_data_Kharkiv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-26T00:00:00+00:00
+[2023-04-27T06:48:26.890+0000] {http.py:123} INFO - Calling HTTP method
+[2023-04-27T06:48:27.033+0000] {base.py:73} INFO - Using connection ID 'weather_conn' for task execution.
+[2023-04-27T06:48:27.346+0000] {http.py:170} ERROR - HTTP error: Forbidden
+[2023-04-27T06:48:27.349+0000] {http.py:171} ERROR - Request with valid date 2023-04-25T10:20:00Z requires data access before 2023-04-26T00:00:00Z, which is not granted with this subscription type (e.g. trial). The valid time period for this account type starts at 2023-04-26T00:00:00Z and ends at 2025-04-27T00:00:00Z. Please contact sales@meteomatics.com and we are happy to provide an extended trial or an upgrade of your account.
+[2023-04-27T06:48:27.395+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 168, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.meteomatics.com/2023-04-25T13:20:00.000+03:00/t_2m:C,precip_1h:mm,wind_speed_10m:ms/49.9923181,36.2310146/json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/operators/http.py", line 125, in execute
+    response = http.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 158, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 211, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 172, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 403:Forbidden
+[2023-04-27T06:48:27.449+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=weather_dag_api, task_id=cities.extract_data_Kharkiv, execution_date=20230426T000000, start_date=20230427T064824, end_date=20230427T064827
+[2023-04-27T06:48:27.535+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 20 for task cities.extract_data_Kharkiv (403:Forbidden; 204)
+[2023-04-27T06:48:27.621+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-04-27T06:48:28.461+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-04-27T07:05:17.951+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T07:05:18.216+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [queued]>
+[2023-04-27T07:05:18.232+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T07:05:18.242+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-27T07:05:18.258+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T07:05:20.364+0000] {taskinstance.py:1309} INFO - Executing <Task(SimpleHttpOperator): cities.extract_data_Kharkiv> on 2023-04-26 00:00:00+00:00
+[2023-04-27T07:05:21.537+0000] {standard_task_runner.py:55} INFO - Started process 695 to run task
+[2023-04-27T07:05:21.636+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'cities.extract_data_Kharkiv', 'scheduled__2023-04-26T00:00:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmpt88zo1h7']
+[2023-04-27T07:05:21.825+0000] {standard_task_runner.py:83} INFO - Job 105: Subtask cities.extract_data_Kharkiv
+[2023-04-27T07:05:23.803+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.cities.extract_data_Kharkiv scheduled__2023-04-26T00:00:00+00:00 [running]> on host 80d943d8f5b4
+[2023-04-27T07:05:30.771+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=cities.extract_data_Kharkiv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-26T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-26T00:00:00+00:00
+[2023-04-27T07:05:30.950+0000] {http.py:123} INFO - Calling HTTP method
+[2023-04-27T07:05:31.599+0000] {base.py:73} INFO - Using connection ID 'weather_conn' for task execution.
+[2023-04-27T07:05:33.720+0000] {http.py:127} INFO - {"version":"3.0","user":"__-_stuff","dateGenerated":"2023-04-27T07:05:33Z","status":"OK","data":[{"parameter":"t_2m:C","coordinates":[{"lat":49.992318,"lon":36.231015,"dates":[{"date":"2023-04-26T05:20:00Z","value":12.1}]}]},{"parameter":"precip_1h:mm","coordinates":[{"lat":49.992318,"lon":36.231015,"dates":[{"date":"2023-04-26T05:20:00Z","value":0.00}]}]},{"parameter":"wind_speed_10m:ms","coordinates":[{"lat":49.992318,"lon":36.231015,"dates":[{"date":"2023-04-26T05:20:00Z","value":2.9}]}]}]}
+
+[2023-04-27T07:05:34.008+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=cities.extract_data_Kharkiv, execution_date=20230426T000000, start_date=20230427T070517, end_date=20230427T070534
+[2023-04-27T07:05:34.586+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-27T07:05:35.371+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

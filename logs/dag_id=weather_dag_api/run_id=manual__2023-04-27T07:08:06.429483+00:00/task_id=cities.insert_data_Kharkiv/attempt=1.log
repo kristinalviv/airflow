@@ -1,0 +1,37 @@
+[2023-04-27T07:08:38.550+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag_api.cities.insert_data_Kharkiv manual__2023-04-27T07:08:06.429483+00:00 [queued]>
+[2023-04-27T07:08:38.592+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag_api.cities.insert_data_Kharkiv manual__2023-04-27T07:08:06.429483+00:00 [queued]>
+[2023-04-27T07:08:38.595+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T07:08:38.600+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-27T07:08:38.602+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-27T07:08:38.709+0000] {taskinstance.py:1309} INFO - Executing <Task(PostgresOperator): cities.insert_data_Kharkiv> on 2023-04-27 07:08:06.429483+00:00
+[2023-04-27T07:08:38.727+0000] {standard_task_runner.py:55} INFO - Started process 810 to run task
+[2023-04-27T07:08:38.760+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weather_dag_api', 'cities.insert_data_Kharkiv', 'manual__2023-04-27T07:08:06.429483+00:00', '--job-id', '140', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag_api.py', '--cfg-path', '/tmp/tmpftbzpj6_']
+[2023-04-27T07:08:38.765+0000] {standard_task_runner.py:83} INFO - Job 140: Subtask cities.insert_data_Kharkiv
+[2023-04-27T07:08:39.282+0000] {task_command.py:389} INFO - Running <TaskInstance: weather_dag_api.cities.insert_data_Kharkiv manual__2023-04-27T07:08:06.429483+00:00 [running]> on host 80d943d8f5b4
+[2023-04-27T07:08:39.936+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weather_dag_api
+AIRFLOW_CTX_TASK_ID=cities.insert_data_Kharkiv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-27T07:08:06.429483+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-27T07:08:06.429483+00:00
+[2023-04-27T07:08:39.939+0000] {sql.py:254} INFO - Executing: INSERT INTO measurements (timestamp, temp, precipitation, wind_speed, location) 
+				VALUES ('2023-04-26T05:20:00Z',
+				12.1,
+				0.0,
+				2.9,
+				'Kharkiv');
+[2023-04-27T07:08:39.966+0000] {base.py:73} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-27T07:08:42.382+0000] {base.py:73} INFO - Using connection ID 'postgres_conn' for task execution.
+[2023-04-27T07:08:42.391+0000] {sql.py:375} INFO - Running statement: INSERT INTO measurements (timestamp, temp, precipitation, wind_speed, location) 
+				VALUES ('2023-04-26T05:20:00Z',
+				12.1,
+				0.0,
+				2.9,
+				'Kharkiv');, parameters: None
+[2023-04-27T07:08:42.394+0000] {sql.py:384} INFO - Rows affected: 1
+[2023-04-27T07:08:42.423+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=weather_dag_api, task_id=cities.insert_data_Kharkiv, execution_date=20230427T070806, start_date=20230427T070838, end_date=20230427T070842
+[2023-04-27T07:08:42.515+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-27T07:08:42.602+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
